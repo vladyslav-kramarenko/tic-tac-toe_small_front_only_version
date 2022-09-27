@@ -1,0 +1,97 @@
+@import "src/assets/styles/variables";
+
+.page__title {
+  text-align: center;
+  margin-bottom: 58px;
+}
+
+.game-field {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 65px;
+    border-bottom: 1px solid $light-grey-border;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: -8%;
+    left: 21%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 412px;
+    height: 412px;
+    background-color: rgba(49, 50, 83, 0.5);
+    border-radius: 8px;
+
+    &--link {
+      padding: 8px 12px;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.description__wrapper {
+  padding:8px 0 32px;
+}
+
+.feedback {
+
+  &__title {
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: 8px 0 16px 0;
+    border-bottom: 1px solid $light-grey-border;
+  }
+}
+
+.question__description {
+  padding-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.question__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.like-question__wrapper {
+  margin-right: 64px;
+}
+
+.support-Ukraine {
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 24px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, $blue-color 0%,$blue-color 50%,$yellow-color 51%,$yellow-color 100%);
+  }
+}
+
+.donate__link {
+  padding: 8px 73px;
+}
+
+.report__link {
+  padding: 8px;
+}
+
+

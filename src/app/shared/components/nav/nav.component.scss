@@ -1,0 +1,42 @@
+@import "../../../../assets/styles/variables";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 2px solid $primary-color;
+  margin-bottom: 42px;
+}
+
+.logo {
+  width: 16px;
+  height: 16px;
+
+  &__wrapper {
+    margin-right: 10%;
+  }
+}
+
+.sign-menu__link {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.leader-board__link {
+  position: relative;
+  padding-left: 23px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $primary-color;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url('^assets/img/medal.svg');
+  }
+}
