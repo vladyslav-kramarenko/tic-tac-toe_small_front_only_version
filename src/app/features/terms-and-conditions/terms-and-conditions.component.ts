@@ -7,20 +7,9 @@ import { fromEvent, map, Observable, tap } from 'rxjs';
   templateUrl: './terms-and-conditions.component.html',
   styleUrls: ['./terms-and-conditions.component.scss']
 })
-export class TermsAndConditionsComponent implements OnInit, DoCheck {
+export class TermsAndConditionsComponent {
   readonly routerLink: typeof RouterLink = RouterLink;
-  scrollObserver$!: Observable<Event>;
-  scrollHeight: number = 0;
-
-  ngOnInit(): void {
-    this.scrollObserver$ = fromEvent(document, 'scroll').pipe(
-      tap(() => this.scrollHeight = window.scrollY)
-    )
-  }
-
-  ngDoCheck() {
-    console.log()
-  }
+  readonly fixedButtonVisibleHeight: number = 300;
 
   onUpBtn(): void {
     const nav = document.querySelector('.nav')!;

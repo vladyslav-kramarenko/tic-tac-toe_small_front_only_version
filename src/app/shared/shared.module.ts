@@ -8,7 +8,9 @@ import { ToGameBtnComponent } from './components/to-game-btn/to-game-btn.compone
 import { GameFieldComponent } from './components/game-field/game-field.component';
 import { GameCellComponent } from './components/game-field/game-cell/game-cell.component';
 import { UpButtonComponent } from './components/up-button/up-button.component';
-
+import { RulesComponent } from './components/rules/rules.component';
+import { QuizComponent } from './components/quiz/quiz.component';
+import { FixedButtonVisibilityPipe } from './pipes/fixed-button-visibility.pipe';
 
 
 @NgModule({
@@ -20,6 +22,9 @@ import { UpButtonComponent } from './components/up-button/up-button.component';
     NavComponent,
     ToGameBtnComponent,
     UpButtonComponent,
+    QuizComponent,
+    RulesComponent,
+    FixedButtonVisibilityPipe,
   ],
   imports: [
     CommonModule,
@@ -30,7 +35,10 @@ import { UpButtonComponent } from './components/up-button/up-button.component';
     FooterComponent,
     NavComponent,
     ToGameBtnComponent,
-    UpButtonComponent
+    UpButtonComponent,
+    QuizComponent,
+    RulesComponent,
+    FixedButtonVisibilityPipe
   ]
 })
 export class SharedModule { }
