@@ -18,6 +18,17 @@ body {
   margin: 0 auto;
 }
 
+.container-settings{
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: $input-background-color;
+  width: 10.188rem;
+  border-radius: 4px;
+  padding: .5rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .link {
   border-radius: 4px;
   outline: none;

@@ -8,6 +8,10 @@ import { RulesComponent } from './components/rules/rules.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
 import { StatisticComponent } from './components/statistic/statistic.component';
+import { ComplexityComponent } from './components/complexity/complexity.component';
+import { SymbolComponent } from './components/symbol/symbol.component';
+import { RedirectAuthorizeComponent } from './components/modals/redirect-authorize/redirect-authorize.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { StatisticComponent } from './components/statistic/statistic.component';
     RulesComponent,
     FixedButtonVisibilityPipe,
     CheckViewportWidthPipe,
-    StatisticComponent
+    StatisticComponent,
+    ComplexityComponent,
+    SymbolComponent,
+    RedirectAuthorizeComponent,
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +40,11 @@ import { StatisticComponent } from './components/statistic/statistic.component';
     RulesComponent,
     FixedButtonVisibilityPipe,
     CheckViewportWidthPipe,
-    StatisticComponent
+    StatisticComponent,
+    ComplexityComponent,
+    SymbolComponent,
+    RedirectAuthorizeComponent,
+    ProfileComponent
   ]
 })
 export class SharedModule { }

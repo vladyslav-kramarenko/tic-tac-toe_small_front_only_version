@@ -1,0 +1,14 @@
+.complexity{
+    &__wrapper {
+      padding: 16px;
+    }
+
+    &__label{
+      display: flex;
+      align-items: center;
+    }
+
+    &__radio {
+      margin-right: 4px;
+    }
+}
