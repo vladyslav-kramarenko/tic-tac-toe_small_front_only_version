@@ -45,6 +45,7 @@ body {
   font-weight: 800;
 }
 
+.rules__item,
 .description__item {
   font-size: 14px;
   font-weight: 700;
@@ -53,6 +54,13 @@ body {
     margin-bottom: 24px;
   }
 }
+
+.fixed-btn {
+  position: fixed;
+  left: calc(50% + 355px);
+  top: calc(50% + 158px);
+}
+
 
 @media (max-width: 709px) {
   .container{

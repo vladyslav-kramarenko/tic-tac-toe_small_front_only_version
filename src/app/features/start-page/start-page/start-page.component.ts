@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-start-page',
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.scss']
 })
-export class StartPageComponent implements OnInit {
+export class StartPageComponent {
+  readonly fixedButtonVisibleHeight: number = 300;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  onUpBtn(): void {
+    const nav = document.querySelector('.nav')!;
+    nav.scrollIntoView();
   }
-
 }
