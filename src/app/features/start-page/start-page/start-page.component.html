@@ -1,5 +1,4 @@
 <div class="page__wrapper">
-  <ng-container *ngIf="scrollObserver$ | async"></ng-container>
   <h1 class="page__title">Welcome to Tic Tac Toe</h1>
 
   <div class="game-field__wrapper">
@@ -18,6 +17,10 @@
   </div>
   <app-quiz></app-quiz>
   <app-rules></app-rules>
-  <app-up-button *ngIf="scrollHeight > 300" class="fixed-btn" (upScreen)="onUpBtn()"></app-up-button>
+  <app-up-button
+    *ngIf="fixedButtonVisibleHeight | fixedButtonVisibility | async"
+    class="fixed-btn"
+    (upScreen)="onUpBtn()"
+  ></app-up-button>
 </div>
 
