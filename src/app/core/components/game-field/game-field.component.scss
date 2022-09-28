@@ -7,8 +7,8 @@
   "cell cell cell"
   "cell cell cell";
   grid-gap: 12px;
-  width: 320px;
-  height: 324px;
+  width: 344px;
+  height: 348px;
 }
 
 .cell {
@@ -17,6 +17,8 @@
 
 @media (max-width:709px) {
   .game-table__wrapper {
+    width: 320px;
+    height: 324px;
     grid-template-rows: repeat(3, 100px);
     grid-auto-rows: minmax(auto, 100px);
   }
