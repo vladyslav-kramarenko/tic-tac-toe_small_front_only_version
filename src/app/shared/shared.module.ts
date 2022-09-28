@@ -7,6 +7,10 @@ import { UpButtonComponent } from './components/up-button/up-button.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
+import { ComplexityComponent } from './components/complexity/complexity.component';
+import { SymbolComponent } from './components/symbol/symbol.component';
+import { RedirectAuthorizeComponent } from './components/modals/redirect-authorize/redirect-authorize.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
     RulesComponent,
     FixedButtonVisibilityPipe,
     CheckViewportWidthPipe,
+    ComplexityComponent,
+    SymbolComponent,
+    RedirectAuthorizeComponent,
+    ProfileComponent,
   ],
   imports: [
     CommonModule,
@@ -29,7 +37,11 @@ import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
     QuizComponent,
     RulesComponent,
     FixedButtonVisibilityPipe,
-    CheckViewportWidthPipe
+    CheckViewportWidthPipe,
+    ComplexityComponent,
+    SymbolComponent,
+    RedirectAuthorizeComponent,
+    ProfileComponent
   ]
 })
 export class SharedModule { }

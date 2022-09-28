@@ -16,3 +16,30 @@ ul {
 a {
   text-decoration: none;
 }
+
+.w-100{
+  width: 100%;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.center{
+  align-items: center;
+  justify-content: center;
+}
+
+.space-around{
+  justify-content: space-around;
+}
+
+.pl-5{
+  padding-left: .5rem;
+}
