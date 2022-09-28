@@ -7,6 +7,7 @@ import { UpButtonComponent } from './components/up-button/up-button.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { QuizComponent } from './components/quiz/quiz.component';
 import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
+import { StatisticComponent } from './components/statistic/statistic.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
     RulesComponent,
     FixedButtonVisibilityPipe,
     CheckViewportWidthPipe,
+    StatisticComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +31,8 @@ import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
     QuizComponent,
     RulesComponent,
     FixedButtonVisibilityPipe,
-    CheckViewportWidthPipe
+    CheckViewportWidthPipe,
+    StatisticComponent
   ]
 })
 export class SharedModule { }
