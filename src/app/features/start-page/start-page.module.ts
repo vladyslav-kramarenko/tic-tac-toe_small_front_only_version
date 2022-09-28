@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { StartPageRoutingModule } from './start-page-routing.module';
-import { StartPageComponent } from './start-page/start-page.component';
+import { StartPageComponent } from './container/start-page.component';
 import { SharedModule } from '../../shared/shared.module';
+import { CoreModule } from '../../core/core.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { SharedModule } from '../../shared/shared.module';
   imports: [
     CommonModule,
     StartPageRoutingModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
 })
 export class StartPageModule { }

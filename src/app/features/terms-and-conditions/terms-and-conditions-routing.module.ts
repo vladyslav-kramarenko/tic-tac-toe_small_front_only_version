@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TermsAndConditionsComponent } from './terms-and-conditions.component';
+import { TermsAndConditionsComponent } from './container/terms-and-conditions.component';
 
 const routes: Routes = [
   {

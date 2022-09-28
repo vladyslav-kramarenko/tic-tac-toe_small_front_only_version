@@ -1,0 +1,45 @@
+<div class="sig-up__wrapper">
+  <form [formGroup]="registrationForm" (submit)="signUp()" class="registration-form">
+    <label class="form__item">
+      Nickname (will shown for other users)
+      <input class="form__input" type="text" placeholder="Enter your nickname" [formControl]="nickName"/>
+    </label>
+    <label class="form__item">
+      Email Address
+      <input class="form__input" type="text" placeholder="Enter your email" [formControl]="email"/>
+    </label>
+    <label class="form__item last-input">
+      Create a password
+      <input class="form__input" type="text" [formControl]="password" placeholder="Enter password"/>
+    </label>
+    <ul class="validation-rules__list">
+      <li class="validation-rules__item">
+        <span>One lowercase character</span>
+      </li>
+      <li class="validation-rules__item">
+        <span>At least 1 symbol</span>
+      </li>
+      <li class="validation-rules__item">
+        <span>One uppercase character</span>
+      </li>
+      <li class="validation-rules__item">
+        <span>8 characters minimum</span>
+      </li>
+    </ul>
+    <div class="condition-checkbox__wrapper">
+      <label class="condition-checkbox__label">
+        <input class="condition-checkbox" type="checkbox" [formControl]="checkbox"/>
+        <span class="accept-checkbox">
+      I accept the
+    </span>
+      </label>
+      <a class="condition__link" [routerLink]="[ '/', routerLinks.termsAndConditions]" target="_blank">Terms & Conditions</a>
+    </div>
+    <button class="link primary-link signUp" type="submit">Sign Up</button>
+  </form>
+
+  <div class="additional-question__wrapper">
+    <span class="additional-question">Already have an account?</span>
+    <a class="additional-question__link" href="">Sign In</a>
+  </div>
+</div>

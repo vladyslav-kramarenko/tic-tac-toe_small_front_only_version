@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '../../../app.config';
+import { RouterLinks } from '../../../app.config';
 
 @Component({
   selector: 'app-footer',
@@ -7,5 +7,5 @@ import { RouterLink } from '../../../app.config';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  readonly routerLink: typeof RouterLink = RouterLink;
+  readonly routerLink: typeof RouterLinks = RouterLinks;
 }
