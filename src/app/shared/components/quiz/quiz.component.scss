@@ -53,3 +53,24 @@
 .report__link {
   padding: 8px;
 }
+
+@media (max-width:709px) {
+  .feedback__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .like-question__wrapper {
+    margin-right: 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $light-grey-border;
+  }
+
+  .donate__link {
+    padding: 8px 151px;
+  }
+
+  .bug-report__wrapper {
+    padding-top: 24px;
+  }
+}
