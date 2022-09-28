@@ -128,7 +128,8 @@
 
   <app-to-game-btn></app-to-game-btn>
   <app-up-button
-    *ngIf="fixedButtonVisibleHeight | fixedButtonVisibility | async"
+    *ngIf="(fixedButtonVisibleHeight | fixedButtonVisibility | async)
+     && (fixedButtonVisibleWidth | checkViewportWidth | async)"
     class="fixed-btn"
     (upScreen)="onUpBtn()"
   ></app-up-button>

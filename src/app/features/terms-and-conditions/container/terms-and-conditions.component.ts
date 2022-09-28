@@ -1,5 +1,5 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
-import { RouterLink } from '../../app.config';
+import { RouterLinks } from '../../../app.config';
 import { fromEvent, map, Observable, tap } from 'rxjs';
 
 @Component({
@@ -8,8 +8,9 @@ import { fromEvent, map, Observable, tap } from 'rxjs';
   styleUrls: ['./terms-and-conditions.component.scss']
 })
 export class TermsAndConditionsComponent {
-  readonly routerLink: typeof RouterLink = RouterLink;
+  readonly routerLink: typeof RouterLinks = RouterLinks;
   readonly fixedButtonVisibleHeight: number = 300;
+  readonly fixedButtonVisibleWidth: number = 800;
 
   onUpBtn(): void {
     const nav = document.querySelector('.nav')!;

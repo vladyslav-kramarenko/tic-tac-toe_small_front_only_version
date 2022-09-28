@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { StartPageModule } from './features/start-page/start-page.module';
+import { HttpClientModule } from '@angular/common/http';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,10 @@ import { StartPageModule } from './features/start-page/start-page.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     SharedModule,
-    StartPageModule
+    StartPageModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
