@@ -35,3 +35,14 @@
     }
   }
 }
+
+@media (max-width:709px) {
+  .game-field {
+    &__overlay {
+      top: -3%;
+      left: 0;
+      width: 343px;
+      height: 348px;
+    }
+  }
+}

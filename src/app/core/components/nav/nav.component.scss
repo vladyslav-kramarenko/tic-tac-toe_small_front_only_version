@@ -41,3 +41,10 @@
     background: url('../../../../assets/img/medal.svg');
   }
 }
+
+@media (max-width:709px) {
+  .leader-board__link,
+  .sign-menu__link {
+    font-size: 14px;
+  }
+}
