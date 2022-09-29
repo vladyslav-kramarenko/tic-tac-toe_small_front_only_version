@@ -26,29 +26,7 @@
   color: $blue-color;
 }
 
-.validation-rules {
-  &__list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 220px;
-    margin-bottom: 24px;
-    align-self: flex-start;
-  }
-
-  &__item {
-    width: 50%;
-    font-size: 8px;
-
-    &::before {
-      content: '•';
-      display: inline-block; width: 1em
-    }
-  }
-}
-
-.signUp {
+.signUp__button {
   padding: 8px 148px;
 }
 
