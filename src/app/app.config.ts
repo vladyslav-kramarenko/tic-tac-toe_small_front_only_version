@@ -5,3 +5,8 @@ export enum RouterLinks {
   signIn = 'sign_in',
   authorization = 'authorization'
 }
+
+export enum PasswordInputTitle {
+  createPassword = 'Create a password',
+  password = 'Password'
+}

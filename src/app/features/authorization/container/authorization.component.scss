@@ -41,6 +41,13 @@
   }
 }
 
-.last-input.form__item {
+.password-input.form__item {
+  position: relative;
   margin: 0;
+}
+
+.signIn__wrapper {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
 }

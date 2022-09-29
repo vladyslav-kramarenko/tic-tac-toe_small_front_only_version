@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { AuthorizationService } from '../authorization.service';
-import { RouterLinks } from '../../../app.config';
+import { PasswordInputTitle, RouterLinks } from '../../../app.config';
 
 @Component({
   selector: 'app-sign-up',
@@ -13,6 +13,7 @@ import { RouterLinks } from '../../../app.config';
 })
 export class SignUpComponent implements OnInit {
   readonly routerLinks: typeof RouterLinks = RouterLinks;
+  readonly passwordTitle: string = PasswordInputTitle.password;
 
   registrationForm!: FormGroup;
 
@@ -23,6 +24,10 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {
     this.initForm();
+  }
+
+  onPasswordKeyDown(inputValue: string) {
+    this.password.setValue(inputValue);
   }
 
   signUp(): void {

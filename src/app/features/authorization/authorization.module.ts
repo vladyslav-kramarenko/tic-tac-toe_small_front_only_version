@@ -8,6 +8,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthNavComponent } from './auth-nav/auth-nav.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AuthNavComponent } from './auth-nav/auth-nav.component';
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    AuthorizationRoutingModule
+    AuthorizationRoutingModule,
+    SharedModule
   ]
 })
 export class AuthorizationModule { }

@@ -12,6 +12,8 @@ import { ComplexityComponent } from './components/complexity/complexity.componen
 import { SymbolComponent } from './components/symbol/symbol.component';
 import { RedirectAuthorizeComponent } from './components/modals/redirect-authorize/redirect-authorize.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PasswordValidationComponent } from './components/password-validation/password-validation.component';
+import { PasswordInputComponent } from './components/password-input/password-input.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     SymbolComponent,
     RedirectAuthorizeComponent,
     ProfileComponent,
+    PasswordValidationComponent,
+    PasswordInputComponent,
   ],
   imports: [
     CommonModule,
@@ -44,7 +48,9 @@ import { ProfileComponent } from './components/profile/profile.component';
     ComplexityComponent,
     SymbolComponent,
     RedirectAuthorizeComponent,
-    ProfileComponent
+    ProfileComponent,
+    PasswordValidationComponent,
+    PasswordInputComponent
   ]
 })
 export class SharedModule { }
