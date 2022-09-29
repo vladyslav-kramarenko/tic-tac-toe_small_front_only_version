@@ -13,7 +13,7 @@
             width: 100%;
         }
     }
-    
+
     .profile-user{
         justify-content: space-between;
 
@@ -24,15 +24,15 @@
 
         .rating{
             align-items: center;
-    
+
             &:before{
                 content: url('../../../../assets/img/medal.svg');
                 margin-left: -.2rem;
             }
-                
+
             .user_rating{
                 font-size: .625rem;
-            }    
+            }
         }
-    }   
+    }
 }
