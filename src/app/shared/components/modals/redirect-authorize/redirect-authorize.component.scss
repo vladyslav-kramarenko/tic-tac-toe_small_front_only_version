@@ -1,26 +1,19 @@
 @import "../../../../../assets/styles/variables.scss";
 
 .sign_in{
-    width: 23.5rem;
-    height: 10.25rem;
-    align-items: center;
-    justify-content: space-around;
-    background-color: $yellow-gray-color;
-    border-radius: .5rem;
-    font-size: 1.25rem;
-    font-weight: 800;
-    text-align: center;
-    padding: 1.5rem .5rem;
-
+    height: 168px;
+    font-size: 20px;
+    font-weight: 700;
+    
     .primary-link{
-        width: 9.875rem;
-        height: 2.375rem;
+        width: 158px;
+        height: 38px;
         text-align: center;
 
         .sign_in-btn,
         .sign_up-btn{
             width: 100%;
-            font-size: .875rem;
+            font-size: 14px;
         }
     }
 }
