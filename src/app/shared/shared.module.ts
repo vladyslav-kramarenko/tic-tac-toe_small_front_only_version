@@ -14,6 +14,7 @@ import { RedirectAuthorizeComponent } from './components/modals/redirect-authori
 import { ProfileComponent } from './components/profile/profile.component';
 import { PasswordValidationComponent } from './components/password-validation/password-validation.component';
 import { PasswordInputComponent } from './components/password-input/password-input.component';
+import { EmailInputComponent } from './components/email-input/email-input.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PasswordInputComponent } from './components/password-input/password-inp
     ProfileComponent,
     PasswordValidationComponent,
     PasswordInputComponent,
+    EmailInputComponent,
   ],
   imports: [
     CommonModule,
@@ -50,7 +52,8 @@ import { PasswordInputComponent } from './components/password-input/password-inp
     RedirectAuthorizeComponent,
     ProfileComponent,
     PasswordValidationComponent,
-    PasswordInputComponent
+    PasswordInputComponent,
+    EmailInputComponent
   ]
 })
 export class SharedModule { }

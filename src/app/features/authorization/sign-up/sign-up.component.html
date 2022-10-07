@@ -4,10 +4,7 @@
       Nickname (will shown for other users)
       <input class="form__input" type="text" placeholder="Enter your nickname" [formControl]="nickName"/>
     </label>
-    <label class="form__item">
-      Email Address
-      <input class="form__input" type="text" placeholder="Enter your email" [formControl]="email"/>
-    </label>
+    <app-email-input></app-email-input>
     <app-password-input (passwordValue)="onPasswordKeyDown($event)" [title]="passwordTitle"></app-password-input>
     <app-password-validation></app-password-validation>
 
