@@ -22,6 +22,7 @@ import { WelcomeComponent } from './components/message-page/welcome/welcome.comp
 import { PasswordComponent } from './components/message-page/password/password.component';
 import { PasswordValidationComponent } from './components/password-validation/password-validation.component';
 import { PasswordInputComponent } from './components/password-input/password-input.component';
+import { EmailInputComponent } from './components/email-input/email-input.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { PasswordInputComponent } from './components/password-input/password-inp
     PasswordComponent,
     PasswordValidationComponent,
     PasswordInputComponent,
+    EmailInputComponent,
   ],
   imports: [
     CommonModule,
@@ -73,5 +75,7 @@ import { PasswordInputComponent } from './components/password-input/password-inp
     WelcomeComponent,
     PasswordComponent,
     PasswordValidationComponent,
+    PasswordInputComponent
   ]
 })
+export class SharedModule { }
