@@ -1,10 +1,7 @@
 <form [formGroup]="signInForm" autocomplete="off" (submit)="onSignIn()">
   <ng-container *ngIf="signInSubscription$ | async"></ng-container>
 
-  <label class="form__item">
-    Email Address
-    <input class="form__input" type="text" placeholder="Enter your email" [formControl]="email"/>
-  </label>
+  <app-email-input></app-email-input>
   <app-password-input [title]="passwordTitle" (passwordValue)="onPasswordKeyDown($event)"></app-password-input>
 
   <p class="forgot__link--wrapper"><a class="forgot__link" href="">Forgot your password?</a></p>
