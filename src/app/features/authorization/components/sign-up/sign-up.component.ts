@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { AuthorizationService } from '../authorization.service';
-import { PasswordInputTitle, RouterLinks } from '../../../app.config';
+import { AuthorizationService } from '../../authorization.service';
+import { PasswordInputTitle, RouterLinks } from '../../../../app.config';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: [
     './sign-up.component.scss',
-    '../container/authorization.component.scss'
+    '../../container/authorization.component.scss'
   ]
 })
 export class SignUpComponent implements OnInit {
