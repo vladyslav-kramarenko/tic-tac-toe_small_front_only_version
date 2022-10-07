@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-password-input',
@@ -8,7 +8,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
     '../../../features/authorization/container/authorization.component.scss'
   ]
 })
-export class PasswordInputComponent implements OnInit {
+export class PasswordInputComponent {
   @Input() title!: string;
 
   @Output() passwordValue: EventEmitter<string> = new EventEmitter<string>();
@@ -18,11 +18,6 @@ export class PasswordInputComponent implements OnInit {
   private isPasswordVisible: boolean = false;
 
   iconSrc: string = '../../../../assets/img/eye.svg';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onKeyDown() {
     this.passwordValue.emit(this.passwordInput.nativeElement.value);

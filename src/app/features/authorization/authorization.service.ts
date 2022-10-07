@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AuthorizationApiService } from '../../core/services';
 import { SIGN_IN_REQUEST_BODY, SIGN_UP_REQUEST_BODY } from '../../core/models/authorization.models';
-import { Observable } from 'rxjs';
+import { Observable, take } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +13,20 @@ export class AuthorizationService {
   ) { }
 
   signUp(body: SIGN_UP_REQUEST_BODY): Observable<unknown> {
-    return this.authorizationApiService.signUp(body);
+    return this.authorizationApiService.signUp(body).pipe(
+      take(1)
+    );
   }
 
   signIn(body: SIGN_IN_REQUEST_BODY): Observable<unknown> {
-    return this.authorizationApiService.signIn(body);
+    return this.authorizationApiService.signIn(body).pipe(
+      take(1)
+    );
+  }
+
+  resetPassword(email: string): Observable<unknown> {
+    return this.authorizationApiService.resetPassword(email).pipe(
+      take(1)
+    )
   }
 }

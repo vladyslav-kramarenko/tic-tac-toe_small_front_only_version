@@ -4,6 +4,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { RouterLinks } from '../../app.config';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AuthorizationComponent } from './container/authorization.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,13 @@ const routes: Routes = [
           },
           {
             path: RouterLinks.signIn,
-            component: SignInComponent
+            component: SignInComponent,
+            children: [
+              {
+                path: RouterLinks.resetPass,
+                component: ResetPasswordComponent
+              }
+            ]
           }
         ]
       }

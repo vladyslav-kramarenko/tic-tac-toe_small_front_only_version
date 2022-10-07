@@ -1,4 +1,4 @@
 <label class="form__item email-input">
   Email Address
-  <input class="form__input" type="text" placeholder="Enter your email"/>
+  <input #emailInput class="form__input" type="text" placeholder="Enter your email" (input)="onKeyDown()" />
 </label>
