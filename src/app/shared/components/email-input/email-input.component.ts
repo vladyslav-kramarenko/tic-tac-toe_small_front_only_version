@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-email-input',
@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
     '../../../features/authorization/container/authorization.component.scss'
   ]
 })
-export class EmailInputComponent implements OnInit {
+export class EmailInputComponent {
+  @Output() emailValue: EventEmitter<string> = new  EventEmitter<string>();
 
-  constructor() { }
+  @ViewChild('emailInput') emailInput!: ElementRef;
 
-  ngOnInit(): void {
+  onKeyDown() {
+    this.emailValue.emit(this.emailInput.nativeElement.value);
   }
-
 }

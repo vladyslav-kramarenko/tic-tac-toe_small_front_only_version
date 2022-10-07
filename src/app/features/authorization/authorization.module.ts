@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthNavComponent } from './auth-nav/auth-nav.component';
 import { SharedModule } from '../../shared/shared.module';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SharedModule } from '../../shared/shared.module';
     AuthorizationComponent,
     SignUpComponent,
     SignInComponent,
-    AuthNavComponent
+    AuthNavComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,

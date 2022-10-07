@@ -3,10 +3,17 @@ export enum RouterLinks {
   start = 'start',
   signUp = 'sign_up',
   signIn = 'sign_in',
-  authorization = 'authorization'
+  authorization = 'authorization',
+  resetPass = 'reset_password'
 }
 
 export enum PasswordInputTitle {
   createPassword = 'Create a password',
   password = 'Password'
+}
+
+export enum Request_Url {
+  signUp = 'api/SignUp',
+  signIn = 'api/SignIn',
+  resetPass = 'api/InitResetPassword'
 }

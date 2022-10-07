@@ -26,8 +26,12 @@ export class SignUpComponent implements OnInit {
     this.initForm();
   }
 
-  onPasswordKeyDown(inputValue: string) {
+  getPasswordInputValue(inputValue: string) {
     this.password.setValue(inputValue);
+  }
+
+  getEmailInputValue(email: string): void {
+    this.email.setValue(email);
   }
 
   signUp(): void {

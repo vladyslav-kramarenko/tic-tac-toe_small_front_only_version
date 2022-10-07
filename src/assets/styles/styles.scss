@@ -34,6 +34,7 @@ body {
   outline: none;
   font-size: 12px;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .primary-link {
@@ -93,7 +94,7 @@ body {
   padding: 24px 8px;
 
   @media (max-width:709px) {
-    width: 340px;    
+    width: 340px;
   }
 }
 
@@ -102,7 +103,7 @@ body {
   height: 24px;
   position: absolute;
   top: 0;
-  right: -35px;  
+  right: -35px;
   background-color: transparent;
   background-image: url('../img/x-cross.svg');
   border: none;
@@ -110,6 +111,6 @@ body {
 
   @media (max-width:709px) {
     top: -35px;
-    right: 0;    
+    right: 0;
   }
 }
