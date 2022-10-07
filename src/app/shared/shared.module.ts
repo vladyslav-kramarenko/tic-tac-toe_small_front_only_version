@@ -75,7 +75,8 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
     WelcomeComponent,
     PasswordComponent,
     PasswordValidationComponent,
-    PasswordInputComponent
+    PasswordInputComponent,
+    EmailInputComponent
   ]
 })
 export class SharedModule { }
