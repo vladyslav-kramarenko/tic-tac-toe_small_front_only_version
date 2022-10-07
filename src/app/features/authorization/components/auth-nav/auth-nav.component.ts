@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLinks } from '../../../app.config';
+import { RouterLinks } from '../../../../app.config';
 
 @Component({
   selector: 'app-auth-nav',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PasswordInputTitle, RouterLinks } from '../../../app.config';
+import { PasswordInputTitle, RouterLinks } from '../../../../app.config';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { AuthorizationService } from '../authorization.service';
+import { AuthorizationService } from '../../authorization.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './sign-in.component.html',
   styleUrls: [
     './sign-in.component.scss',
-    '../container/authorization.component.scss'
+    '../../container/authorization.component.scss'
   ]
 })
 export class SignInComponent implements OnInit {
