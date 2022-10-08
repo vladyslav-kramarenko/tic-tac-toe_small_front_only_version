@@ -53,7 +53,7 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
   imports: [
     CommonModule,
     RouterLinkWithHref,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     ToGameBtnComponent,

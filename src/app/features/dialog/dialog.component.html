@@ -1,0 +1,10 @@
+<div *ngIf="isDialogOpen$ | async" class="overlay">
+  <div class="dialog-content" (clickOutside)="closeDialog()">
+    <div class="confirm__wrapper" >{{(modalConfig$ | async)?.modalType}}
+      <app-reset-password [description]="(modalConfig$ | async)?.description!" [content]="(modalConfig$ | async)?.content!"></app-reset-password>
+    </div>
+    <button class="btn-close" type="button" (click)="closeDialog()">
+      <img src="../../../assets/img/x-cross.svg" alt="close-btn">
+    </button>
+  </div>
+</div>

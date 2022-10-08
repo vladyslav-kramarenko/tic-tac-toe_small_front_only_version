@@ -7,10 +7,11 @@ import { SharedModule } from './shared/shared.module';
 import { StartPageModule } from './features/start-page/start-page.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
+import { DialogModule } from './features/dialog/dialog.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +19,8 @@ import { CoreModule } from './core/core.module';
     HttpClientModule,
     SharedModule,
     StartPageModule,
-    CoreModule
+    CoreModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

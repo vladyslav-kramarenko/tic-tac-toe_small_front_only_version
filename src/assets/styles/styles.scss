@@ -97,20 +97,3 @@ body {
     width: 340px;
   }
 }
-
-.btn-close{
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 0;
-  right: -35px;
-  background-color: transparent;
-  background-image: url('../img/x-cross.svg');
-  border: none;
-
-
-  @media (max-width:709px) {
-    top: -35px;
-    right: 0;
-  }
-}
