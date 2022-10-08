@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { AuthorizationService } from '../../authorization.service';
+import { MatDialog } from '@angular/material/dialog';
+import {
+  ResetPasswordDialogComponent
+} from '../../../../shared/components/modals/reset-password/reset-password-dialog.component';
 
 @Component({
   selector: 'app-reset-password',
@@ -11,7 +15,8 @@ export class ResetPasswordComponent {
   email: string = '';
 
   constructor(
-    private authorizationService: AuthorizationService
+    private authorizationService: AuthorizationService,
+    private dialog: MatDialog
   ) { }
 
   getEmailInputValue(email: string) {
@@ -19,6 +24,9 @@ export class ResetPasswordComponent {
   }
 
   onResetPasswordClick(): void {
-    this.authorizationService.resetPassword(this.email).subscribe();
+    this.dialog.open(ResetPasswordDialogComponent, {
+      panelClass: 'aaa'
+    })
+    // this.authorizationService.resetPassword(this.email).subscribe();
   }
 }

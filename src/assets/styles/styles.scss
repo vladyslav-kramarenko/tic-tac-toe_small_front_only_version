@@ -104,7 +104,7 @@ body {
   position: absolute;
   top: 0;
   right: -35px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   background-image: url('../img/x-cross.svg');
   border: none;
 
@@ -113,4 +113,20 @@ body {
     top: -35px;
     right: 0;
   }
+}
+
+body .mat-dialog-container {
+  padding: 0;
+}
+
+.cdk-overlay-pane.my-dialog {
+  position: relative !important;
+}
+.btn-close.mat-button {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
 }

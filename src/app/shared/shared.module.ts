@@ -15,7 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { SaveScoreComponent } from './components/modals/save-score/save-score.component';
 import { LeaveRoundComponent } from './components/modals/leave-round/leave-round.component';
 import { SuccessfullSavedComponent } from './components/modals/successfull-saved/successfull-saved.component';
-import { ResetPasswordComponent } from './components/modals/reset-password/reset-password.component';
+import { ResetPasswordDialogComponent } from './components/modals/reset-password/reset-password-dialog.component';
 import { ConfirmAccountComponent } from './components/message-page/confirm-account/confirm-account.component';
 import { SentInstructionComponent } from './components/message-page/sent-instruction/sent-instruction.component';
 import { WelcomeComponent } from './components/message-page/welcome/welcome.component';
@@ -23,6 +23,7 @@ import { PasswordComponent } from './components/message-page/password/password.c
 import { PasswordValidationComponent } from './components/password-validation/password-validation.component';
 import { PasswordInputComponent } from './components/password-input/password-input.component';
 import { EmailInputComponent } from './components/email-input/email-input.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
     SaveScoreComponent,
     LeaveRoundComponent,
     SuccessfullSavedComponent,
-    ResetPasswordComponent,
+    ResetPasswordDialogComponent,
     ConfirmAccountComponent,
     SentInstructionComponent,
     WelcomeComponent,
@@ -53,7 +54,8 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
   imports: [
     CommonModule,
     RouterLinkWithHref,
-    RouterModule
+    RouterModule,
+    MatButtonModule
   ],
   exports: [
     ToGameBtnComponent,
@@ -69,7 +71,7 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
     ProfileComponent,
     LeaveRoundComponent,
     SuccessfullSavedComponent,
-    ResetPasswordComponent,
+    ResetPasswordDialogComponent,
     ConfirmAccountComponent,
     SentInstructionComponent,
     WelcomeComponent,
