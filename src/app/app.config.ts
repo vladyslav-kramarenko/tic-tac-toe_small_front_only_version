@@ -18,3 +18,7 @@ export enum Request_Url {
   signIn = 'api/SignIn',
   resetPass = 'api/InitResetPassword'
 }
+
+export const minimumPasswordLength = 8;
+
+export const passwordPattern = '/(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[!@#$%^&*a-zA-Z]{8,}/g';

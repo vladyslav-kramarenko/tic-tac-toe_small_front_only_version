@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PasswordInputTitle, RouterLinks } from '../../../../app.config';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthorizationService } from '../../authorization.service';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -30,12 +30,10 @@ export class SignInComponent implements OnInit {
     this.initForm();
   }
 
-  getPasswordInputValue(inputValue: string): void {
-    this.password.setValue(inputValue);
-  }
-
   onSignIn(): void {
-    this.signInSubscription$ = this.authorizationService.signIn(this.signInForm.value);
+    if (this.signInForm.valid) {
+      this.signInSubscription$ = this.authorizationService.signIn(this.signInForm.value);
+    }
   }
 
   getEmailInputValue(email: string): void {
@@ -44,8 +42,8 @@ export class SignInComponent implements OnInit {
 
   private initForm(): void {
     this.signInForm = this.fb.group({
-      email: '',
-      password: ''
+      email: ['', Validators.required],
+      password: ['', Validators.required]
     })
   }
 
