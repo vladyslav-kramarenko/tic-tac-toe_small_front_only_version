@@ -5,6 +5,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GameCellComponent } from './components/game-field/game-cell/game-cell.component';
 import { RouterModule } from '@angular/router';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 
 
@@ -13,7 +14,8 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     NavComponent,
     GameFieldComponent,
-    GameCellComponent
+    GameCellComponent,
+    ClickOutsideDirective
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     NavComponent,
     GameFieldComponent,
+    ClickOutsideDirective
   ]
 })
 export class CoreModule { }

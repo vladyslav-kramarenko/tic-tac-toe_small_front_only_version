@@ -14,7 +14,6 @@ import { RouterLinks } from '../../../../app.config';
   styleUrls: ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent {
-
   email: string = '';
 
   constructor(
