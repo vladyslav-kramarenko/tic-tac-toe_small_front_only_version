@@ -22,7 +22,7 @@ export class DialogComponent implements OnInit {
   }
 
   closeDialog(): void {
-    this.dialogService.close();
+    this.dialogService.close(123);
   }
 
   private initDialog(): void {

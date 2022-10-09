@@ -5,6 +5,7 @@ import { RouterLinks } from '../../app.config';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AuthorizationComponent } from './container/authorization.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { InfoPageComponent } from './components/info-page/info-page.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
                 component: ResetPasswordComponent
               }
             ]
+          },
+          {
+            path: 'info',
+            component: InfoPageComponent
           }
         ]
       }
