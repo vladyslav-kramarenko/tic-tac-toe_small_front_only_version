@@ -14,8 +14,7 @@ import { RedirectAuthorizeComponent } from './components/modals/redirect-authori
 import { ProfileComponent } from './components/profile/profile.component';
 import { SaveScoreComponent } from './components/modals/save-score/save-score.component';
 import { LeaveRoundComponent } from './components/modals/leave-round/leave-round.component';
-import { SuccessfullSavedComponent } from './components/modals/successfull-saved/successfull-saved.component';
-import { ResetPasswordDialogComponent } from './components/modals/reset-password/reset-password-dialog.component';
+import { ConfirmDialogComponent } from './components/modals/confirm-dialog/confirm-dialog.component';
 import { ConfirmAccountComponent } from './components/message-page/confirm-account/confirm-account.component';
 import { SentInstructionComponent } from './components/message-page/sent-instruction/sent-instruction.component';
 import { WelcomeComponent } from './components/message-page/welcome/welcome.component';
@@ -24,6 +23,7 @@ import { PasswordValidationComponent } from './components/password-validation/pa
 import { PasswordInputComponent } from './components/password-input/password-input.component';
 import { EmailInputComponent } from './components/email-input/email-input.component';
 import { MatButtonModule } from '@angular/material/button';
+import { DialogWindowModule } from '../features/dialog-window/dialog-window.module';
 
 @NgModule({
   declarations: [
@@ -41,8 +41,7 @@ import { MatButtonModule } from '@angular/material/button';
     ProfileComponent,
     SaveScoreComponent,
     LeaveRoundComponent,
-    SuccessfullSavedComponent,
-    ResetPasswordDialogComponent,
+    ConfirmDialogComponent,
     ConfirmAccountComponent,
     SentInstructionComponent,
     WelcomeComponent,
@@ -55,7 +54,8 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     RouterLinkWithHref,
     RouterModule,
-    MatButtonModule
+    MatButtonModule,
+    DialogWindowModule
   ],
   exports: [
     ToGameBtnComponent,
@@ -70,8 +70,7 @@ import { MatButtonModule } from '@angular/material/button';
     RedirectAuthorizeComponent,
     ProfileComponent,
     LeaveRoundComponent,
-    SuccessfullSavedComponent,
-    ResetPasswordDialogComponent,
+    ConfirmDialogComponent,
     ConfirmAccountComponent,
     SentInstructionComponent,
     WelcomeComponent,

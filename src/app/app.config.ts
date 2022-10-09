@@ -4,7 +4,8 @@ export enum RouterLinks {
   signUp = 'sign_up',
   signIn = 'sign_in',
   authorization = 'authorization',
-  resetPass = 'reset_password'
+  resetPass = 'reset_password',
+  confirmReset = 'confirm-reset'
 }
 
 export enum PasswordInputTitle {
