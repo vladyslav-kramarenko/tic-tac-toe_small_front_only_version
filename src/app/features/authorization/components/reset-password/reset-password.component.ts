@@ -25,7 +25,7 @@ export class ResetPasswordComponent {
 
   onResetPasswordClick(): void {
     this.dialog.open(ResetPasswordDialogComponent, {
-      panelClass: 'aaa'
+      hasBackdrop: false
     })
     // this.authorizationService.resetPassword(this.email).subscribe();
   }
