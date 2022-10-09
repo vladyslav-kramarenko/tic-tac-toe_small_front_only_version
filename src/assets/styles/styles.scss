@@ -81,11 +81,11 @@ body {
 }
 
 .modal-alert{
+  position: relative;
   width: 376px;
   height: 167px;
   align-items: center;
   justify-content: space-around;
-  position: relative;
   background-color: $yellow-gray-color;
   border-radius: 8px;
   font-size: 14px;
@@ -95,5 +95,34 @@ body {
 
   @media (max-width:709px) {
     width: 340px;
+  }
+}
+
+.btn-close{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 0;
+  right: -35px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('../img/x-cross.svg');
+  border: none;
+}
+
+body .mat-dialog-container {
+  padding: 0;
+}
+
+.btn-close.mat-button {
+  position: absolute;
+  top: 0px;
+  right: -35px;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+
+  @media (max-width:709px) {
+    top: -35px;
+    right: 0;
   }
 }

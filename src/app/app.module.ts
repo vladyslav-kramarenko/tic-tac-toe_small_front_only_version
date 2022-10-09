@@ -7,7 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { StartPageModule } from './features/start-page/start-page.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
-import { DialogModule } from './features/dialog/dialog.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,11 +16,11 @@ import { DialogModule } from './features/dialog/dialog.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     SharedModule,
     StartPageModule,
     CoreModule,
-    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

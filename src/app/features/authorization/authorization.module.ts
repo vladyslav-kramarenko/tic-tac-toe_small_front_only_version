@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
 import { AuthNavComponent } from './components/auth-nav/auth-nav.component';
 import { SharedModule } from '../../shared/shared.module';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { InfoPageComponent } from './components/info-page/info-page.component';
+import { ConfirmResetComponent } from './components/confrim-reset/confirm-reset.component';
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import { InfoPageComponent } from './components/info-page/info-page.component';
     SignInComponent,
     AuthNavComponent,
     ResetPasswordComponent,
-    InfoPageComponent
+    ConfirmResetComponent
   ],
   imports: [
     CommonModule,

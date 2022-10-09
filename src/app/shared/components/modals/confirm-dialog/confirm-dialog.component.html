@@ -1,0 +1,9 @@
+<app-dialog-window (onBackdropClick)="dialogRef.close()">
+  <div confirm class="reset modal-alert col">
+    <div class="wrapper">
+      <h2 class="title">{{data.content}}</h2>
+      <p class="message">{{data.description }}</p>
+    </div>
+    <button class="btn-close" mat-button type="button" (click)="dialogRef.close()"></button>
+  </div>
+</app-dialog-window>
