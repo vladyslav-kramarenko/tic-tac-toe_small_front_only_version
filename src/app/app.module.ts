@@ -7,7 +7,6 @@ import { SharedModule } from './shared/shared.module';
 import { StartPageModule } from './features/start-page/start-page.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
-import { DialogModule } from './features/dialog/dialog.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +19,6 @@ import { DialogModule } from './features/dialog/dialog.module';
     SharedModule,
     StartPageModule,
     CoreModule,
-    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

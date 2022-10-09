@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { AuthorizationService } from '../../authorization.service';
-import { DialogService } from '../../../dialog/dialog.service';
-import { Observable, switchMap, tap } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +12,6 @@ export class ResetPasswordComponent {
 
   constructor(
     private authorizationService: AuthorizationService,
-    private dialogService: DialogService,
     private router: Router,
   ) { }
 
@@ -29,16 +26,5 @@ export class ResetPasswordComponent {
     // this.openConfirm().pipe(
     //   switchMap((v) => this.router.navigate(['info']))
     // ).subscribe()
-    this.openConfirm()
-  }
-
-  private openConfirm() {
-    this.dialogService.open({
-      modalType: 'confirm',
-      content: 'We successfully received your data and sent data for reset password',
-      description: 'Please go to your email to reset password'
-    }).subscribe({
-      complete: () => this.router.navigate(['info'])
-    })
   }
 }
