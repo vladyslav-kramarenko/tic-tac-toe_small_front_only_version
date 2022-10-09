@@ -3,8 +3,8 @@
   <form [formGroup]="signInForm" autocomplete="off" (submit)="onSignIn()">
     <ng-container *ngIf="signInSubscription$ | async"></ng-container>
 
-    <app-email-input (emailValue)="getEmailInputValue($event)"></app-email-input>
-    <app-password-input [title]="passwordTitle" (passwordValue)="getPasswordInputValue($event)"></app-password-input>
+    <app-email-input [formControl]="email"></app-email-input>
+    <app-password-input [formControl]="password" [title]="passwordTitle"></app-password-input>
 
     <p class="forgot__link--wrapper">
       <a class="forgot__link" [routerLink]="['/', routerLinks.authorization, routerLinks.signIn, routerLinks.resetPass]">

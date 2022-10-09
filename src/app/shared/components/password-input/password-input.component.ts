@@ -1,4 +1,5 @@
-import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, forwardRef, Input, ViewChild } from '@angular/core';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-password-input',
@@ -6,21 +7,39 @@ import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@
   styleUrls: [
     './password-input.component.scss',
     '../../../features/authorization/container/authorization.component.scss'
+  ],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => PasswordInputComponent),
+      multi: true
+    },
   ]
 })
-export class PasswordInputComponent {
+export class PasswordInputComponent implements ControlValueAccessor {
   @Input() title!: string;
-
-  @Output() passwordValue: EventEmitter<string> = new EventEmitter<string>();
+  @Input() isPasswordValid!: boolean;
+  @Input() isPasswordTouched!: boolean;
 
   @ViewChild('passwordInput') passwordInput!: ElementRef;
 
   private isPasswordVisible: boolean = false;
 
   iconSrc: string = '../../../../assets/img/eye.svg';
+  password!: string;
+  changed!: (value: string) => void;
+  touched!: () => void;
 
-  onKeyDown() {
-    this.passwordValue.emit(this.passwordInput.nativeElement.value);
+  writeValue(value: string) {
+    this.password = value;
+  }
+
+  registerOnChange(fn: any) {
+    this.changed = fn;
+  }
+
+  registerOnTouched(fn: any) {
+    this.touched = fn;
   }
 
   togglePasswordVisibility(): void {

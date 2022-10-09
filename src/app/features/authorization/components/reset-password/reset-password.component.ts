@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs';
 
@@ -7,14 +7,15 @@ import { MatDialog } from '@angular/material/dialog';
 import { AuthorizationService } from '../../authorization.service';
 import { ConfirmDialogComponent } from '../../../../shared/components/modals/confirm-dialog/confirm-dialog.component';
 import { RouterLinks } from '../../../../app.config';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-confirm-dialog',
   templateUrl: './reset-password.component.html',
   styleUrls: ['./reset-password.component.scss']
 })
-export class ResetPasswordComponent {
-  email: string = '';
+export class ResetPasswordComponent implements OnInit{
+  password!: FormControl;
 
   constructor(
     private authorizationService: AuthorizationService,
@@ -22,8 +23,8 @@ export class ResetPasswordComponent {
     private router: Router
   ) { }
 
-  getEmailInputValue(email: string) {
-    this.email = email;
+  ngOnInit(): void {
+    this.initEmailControl();
   }
 
   onResetPasswordClick(): void {
@@ -37,5 +38,9 @@ export class ResetPasswordComponent {
       tap(() => this.router.navigate([ RouterLinks.confirmReset ]))
     ).subscribe()
     // this.authorizationService.resetPassword(this.email).subscribe();
+  }
+
+  private initEmailControl() {
+    this.password = new FormControl('', [Validators.required]);
   }
 }

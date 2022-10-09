@@ -1,12 +1,26 @@
 <div class="sig-up__wrapper">
+
+  <ng-template *ngIf="passwordSubscription$ | async"></ng-template>
+
   <form [formGroup]="registrationForm" autocomplete="off" (submit)="signUp()" class="registration-form">
     <label class="form__item">
       Nickname (will shown for other users)
       <input class="form__input" type="text" placeholder="Enter your nickname" [formControl]="nickName"/>
     </label>
-    <app-email-input (emailValue)="getEmailInputValue($event)"></app-email-input>
-    <app-password-input (passwordValue)="getPasswordInputValue($event)" [title]="passwordTitle"></app-password-input>
-    <app-password-validation></app-password-validation>
+    <app-email-input [formControl]="email"></app-email-input>
+    <app-password-input
+      [formControl]="password"
+      [title]="passwordTitle"
+      [isPasswordValid]="isPasswordValid"
+      [isPasswordTouched]="isPasswordTouched"
+    ></app-password-input>
+    <app-password-validation
+      [isIncludeSpecialSymbol]="isIncludeSpecialSymbol"
+      [isIncludeCapitalLetterSymbol]="isIncludeCapitalLetterSymbol"
+      [isIncludeLowerCaseLetterSymbol]="isIncludeLowerCaseLetterSymbol"
+      [isMinLengthEnough]="isMinLengthEnough"
+      [isPasswordTouched]="isPasswordTouched"
+    ></app-password-validation>
 
     <div class="condition-checkbox__wrapper">
       <label class="condition-checkbox__label">

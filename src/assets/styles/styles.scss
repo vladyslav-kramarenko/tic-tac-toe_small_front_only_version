@@ -126,3 +126,16 @@ body .mat-dialog-container {
     right: 0;
   }
 }
+
+.green {
+  color: $validation-green;
+}
+
+.red,
+.red.password-input.form__item {
+  color: $validation-red;
+}
+
+.password.red-border.form__input {
+  border-color: $validation-red;
+}
