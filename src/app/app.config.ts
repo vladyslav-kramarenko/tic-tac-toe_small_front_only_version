@@ -5,7 +5,9 @@ export enum RouterLinks {
   signIn = 'sign_in',
   authorization = 'authorization',
   resetPass = 'reset_password',
-  confirmReset = 'confirm-reset'
+  confirmReset = 'confirm-reset',
+  gameRoom = 'game_room',
+  botConfrontation = 'bot_confrontation'
 }
 
 export enum PasswordInputTitle {
@@ -22,3 +24,8 @@ export enum Request_Url {
 export const minimumPasswordLength = 8;
 
 export const passwordPattern = '/(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[!@#$%^&*a-zA-Z]{8,}/g';
+
+export enum ButtonName {
+  toGame = 'To Game',
+  backToHome = 'Back to Home'
+}

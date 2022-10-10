@@ -1,0 +1,13 @@
+<div class="game-room__wrapper">
+  <app-back-btn [title]="buttonName.backToHome" [className]="'to-game__link'" [link]="linkForButton"></app-back-btn>
+
+  <div class="game-field__wrapper">
+    <div class="info__wrapper">
+      <app-statistic></app-statistic>
+      <app-complexity></app-complexity>
+      <app-symbol></app-symbol>
+    </div>
+    <app-game-field></app-game-field>
+  </div>
+
+</div>

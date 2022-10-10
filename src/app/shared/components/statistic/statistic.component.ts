@@ -6,5 +6,4 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./statistic.component.scss']
 })
 export class StatisticComponent {
-  @Input() isComponentResized: boolean = false
 }
