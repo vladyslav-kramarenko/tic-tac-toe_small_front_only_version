@@ -10,7 +10,6 @@
   width: 163px;
   height: 98px;
   padding: 8px;
-  box-sizing: content-box;
 }
 
 .trophy:before {
@@ -35,7 +34,7 @@
 }
 
 @media (max-width:709px) {
-  .resize__item {
+  .score__item {
     flex-direction: column;
     height: 100%;
     justify-content: space-around;
@@ -45,11 +44,12 @@
     }
   }
 
-  .resize__wrapper {
+  .score__wrapper {
     flex-direction: row;
     align-items: center;
     width: 343px;
     height: 66px;
     padding: 12px 8px 8px 8px;
+    margin-bottom: 24px;
   }
 }

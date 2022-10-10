@@ -1,6 +1,5 @@
-import { Component, DoCheck, OnInit } from '@angular/core';
-import { RouterLinks } from '../../../app.config';
-import { fromEvent, map, Observable, tap } from 'rxjs';
+import { Component } from '@angular/core';
+import { ButtonName, RouterLinks } from '../../../app.config';
 
 @Component({
   selector: 'app-terms-and-conditions',
@@ -11,6 +10,8 @@ export class TermsAndConditionsComponent {
   readonly routerLink: typeof RouterLinks = RouterLinks;
   readonly fixedButtonVisibleHeight: number = 300;
   readonly fixedButtonVisibleWidth: number = 800;
+  readonly buttonName: typeof ButtonName = ButtonName;
+  readonly linkForButton = ['/', RouterLinks.gameRoom, RouterLinks.start]
 
   onUpBtn(): void {
     const nav = document.querySelector('.nav')!;

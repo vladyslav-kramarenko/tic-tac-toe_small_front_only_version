@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLinks } from '../../../../app.config';
 
 @Component({
   selector: 'app-container',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 export class StartPageComponent {
   readonly fixedButtonVisibleHeight: number = 300;
   readonly fixedButtonVisibleWidth: number = 800;
+  readonly routerLinks: typeof RouterLinks = RouterLinks;
 
   onUpBtn(): void {
     const nav = document.querySelector('.nav')!;

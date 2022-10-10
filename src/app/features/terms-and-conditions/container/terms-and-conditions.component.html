@@ -1,5 +1,5 @@
 <section class="page__wrapper">
-  <app-to-game-btn></app-to-game-btn>
+  <app-back-btn [title]="buttonName.toGame" [className]="'to-game__link'" [link]="linkForButton"></app-back-btn>
 
   <div class="terms__content">
     <h2 class="page__title">Terms and Conditions</h2>
@@ -126,7 +126,7 @@
     </div>
   </div>
 
-  <app-to-game-btn></app-to-game-btn>
+  <app-back-btn [title]="buttonName.toGame" [className]="'to-game__link'" [link]="linkForButton"></app-back-btn>
   <app-up-button
     *ngIf="(fixedButtonVisibleHeight | fixedButtonVisibility | async)
      && (fixedButtonVisibleWidth | checkViewportWidth | async)"
