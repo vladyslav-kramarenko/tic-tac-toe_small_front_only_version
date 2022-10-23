@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ButtonName, RouterLinks } from '../../../../app.config';
 import { GameService } from '../../game.service';
 import { Observable } from 'rxjs';
@@ -13,7 +13,7 @@ import { DialogWindowService } from '../../../dialog-window/dialog-window.servic
   templateUrl: './bot-game.component.html',
   styleUrls: ['./bot-game.component.scss']
 })
-export class BotGameComponent implements OnInit, CanComponentDeactivate {
+export class BotGameComponent implements OnInit, CanComponentDeactivate, OnDestroy {
   readonly buttonName: typeof ButtonName = ButtonName;
   readonly routerLinks: typeof RouterLinks = RouterLinks;
   readonly linkForBackButton = ['/', RouterLinks.gameRoom, RouterLinks.start];
@@ -38,6 +38,10 @@ export class BotGameComponent implements OnInit, CanComponentDeactivate {
     this.gameResult();
   }
 
+  ngOnDestroy(): void {
+    this.gameService.playAgain();
+  }
+
   onCellHandler(cell: GameCell): void {
     if (cell.sign) {
       return;
@@ -48,11 +52,12 @@ export class BotGameComponent implements OnInit, CanComponentDeactivate {
   canDeactivate(): Observable<boolean> | boolean {
     let dialogRef!: MatDialogRef<any>;
     const isRedirected = this.dialogService.isRedirectToSignUp || this.dialogService.isRedirectToSignIn;
-     if (!isRedirected) {
+    if (!isRedirected) {
       dialogRef = this.dialog.open(SaveScoreComponent, {
-         hasBackdrop: false
-       });
-     }
+        hasBackdrop: false
+      });
+    }
+    clearTimeout(this.gameService.gameReloadTimerId);
     return isRedirected ? isRedirected : dialogRef.afterClosed();
   }
 
