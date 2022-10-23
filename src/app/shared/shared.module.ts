@@ -6,7 +6,7 @@ import { BackBtnComponent } from './components/back-btn/back-btn.component';
 import { UpButtonComponent } from './components/up-button/up-button.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { QuizComponent } from './components/quiz/quiz.component';
-import { CheckViewportWidthPipe, FixedButtonVisibilityPipe, SetCellIconPipe } from './pipes';
+import { CheckViewportWidthPipe, FixedButtonVisibilityPipe, GameResultPipe, SetCellIconPipe } from './pipes';
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { ComplexityComponent } from './components/complexity/complexity.component';
 import { SymbolComponent } from './components/symbol/symbol.component';
@@ -24,10 +24,8 @@ import { EmailInputComponent } from './components/email-input/email-input.compon
 import { MatButtonModule } from '@angular/material/button';
 import { DialogWindowModule } from '../features/dialog-window/dialog-window.module';
 import { ReactiveFormsModule } from '@angular/forms';
-import { TestComponent } from './modals/test/test.component';
 import { SaveScoreComponent } from './components/modals/save-score/save-score.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { GameResultPipe } from './pipes/game-result.pipe';
 
 @NgModule({
   declarations: [
@@ -54,7 +52,6 @@ import { GameResultPipe } from './pipes/game-result.pipe';
     EmailInputComponent,
     SetCellIconPipe,
     GameResultPipe,
-    TestComponent,
     SaveScoreComponent,
   ],
   imports: [
@@ -89,7 +86,6 @@ import { GameResultPipe } from './pipes/game-result.pipe';
     EmailInputComponent,
     SetCellIconPipe,
     GameResultPipe,
-    TestComponent
   ]
 })
 export class SharedModule { }
