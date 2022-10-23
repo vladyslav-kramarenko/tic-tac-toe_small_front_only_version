@@ -3,9 +3,13 @@
 
   <div class="game-field__wrapper">
 
-    <app-game-field class="game-field"></app-game-field>
+    <app-game-field class="game-field" [gameField$]="gameField$"></app-game-field>
     <div class="game-field__overlay">
-      <a class="game-field__overlay--link link secondary-link" [routerLink]="['/', routerLinks.gameRoom,routerLinks.botConfrontation]">
+      <a
+        (click)="onPlayWithRobot()"
+        class="game-field__overlay--link link secondary-link"
+        [routerLink]="['/', routerLinks.gameRoom,routerLinks.botConfrontation]"
+      >
         Play with robot
       </a>
       <a class="game-field__overlay--link link secondary-link">
@@ -16,5 +20,4 @@
       </a>
     </div>
   </div>
-
 </div>

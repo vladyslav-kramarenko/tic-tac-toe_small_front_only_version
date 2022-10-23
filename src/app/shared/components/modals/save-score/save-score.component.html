@@ -1,24 +1,27 @@
-<div class="save_score col modal-alert">
+<app-dialog-window (onBackdropClick)="dialogRef.close()">
+  <div saveComp class="save_score col modal-alert">
     <div>
-        <h2 class="title">Save your score</h2>
-        <p class="message">You can save your results and participate in the ranking</p> 
+      <h2 class="title">Save your score</h2>
+      <p class="message">You can save your results and participate in the ranking</p>
     </div>
     <div class="modal_buttons row space-around w-100">
-        <div class="link secondary-link row center">
-            <a class="leave-btn">
-              Leave anyway
-            </a>
-        </div>  
-        <div class="link primary-link row center">
-            <a class="sign_up-btn">
-              Sign Up
-            </a>
-        </div>  
-        <div class="link primary-link row center">
-            <a class="sign_in-btn">
-              Sign In
-            </a>
-        </div>                  
+      <div class="row center">
+        <a class="leave-btn link secondary-link" [mat-dialog-close]="true">
+          Leave anyway
+        </a>
+      </div>
+      <div class="row center">
+        <a class="link primary-link" [mat-dialog-close]="true" (click)="onSignUp()">
+          Sign Up
+        </a>
+      </div>
+      <div class="row center">
+        <a class="link primary-link" [mat-dialog-close]="true" (click)="onSignIn()">
+          Sign In
+        </a>
+      </div>
     </div>
-    <button class="btn-close" type="button"></button>
-</div>
+    <button class="btn-close" mat-button type="button" [mat-dialog-close]="false"></button>
+  </div>
+
+</app-dialog-window>

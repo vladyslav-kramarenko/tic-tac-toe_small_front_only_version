@@ -7,13 +7,15 @@ import { SharedModule } from '../../shared/shared.module';
 import { CoreModule } from '../../core/core.module';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { BotGameComponent } from './components/bot-game/bot-game.component';
+import { GameFieldOverlayComponent } from './components/game-field-overlay/game-field-overlay.component';
 
 
 @NgModule({
   declarations: [
     GameRoomComponent,
     StartPageComponent,
-    BotGameComponent
+    BotGameComponent,
+    GameFieldOverlayComponent
   ],
   imports: [
     CommonModule,

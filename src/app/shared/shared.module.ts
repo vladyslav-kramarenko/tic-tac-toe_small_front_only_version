@@ -6,13 +6,12 @@ import { BackBtnComponent } from './components/back-btn/back-btn.component';
 import { UpButtonComponent } from './components/up-button/up-button.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { QuizComponent } from './components/quiz/quiz.component';
-import { CheckViewportWidthPipe, FixedButtonVisibilityPipe } from './pipes';
+import { CheckViewportWidthPipe, FixedButtonVisibilityPipe, SetCellIconPipe } from './pipes';
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { ComplexityComponent } from './components/complexity/complexity.component';
 import { SymbolComponent } from './components/symbol/symbol.component';
 import { RedirectAuthorizeComponent } from './components/modals/redirect-authorize/redirect-authorize.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { SaveScoreComponent } from './components/modals/save-score/save-score.component';
 import { LeaveRoundComponent } from './components/modals/leave-round/leave-round.component';
 import { ConfirmDialogComponent } from './components/modals/confirm-dialog/confirm-dialog.component';
 import { ConfirmAccountComponent } from './components/message-page/confirm-account/confirm-account.component';
@@ -24,6 +23,11 @@ import { PasswordInputComponent } from './components/password-input/password-inp
 import { EmailInputComponent } from './components/email-input/email-input.component';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogWindowModule } from '../features/dialog-window/dialog-window.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { TestComponent } from './modals/test/test.component';
+import { SaveScoreComponent } from './components/modals/save-score/save-score.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { GameResultPipe } from './pipes/game-result.pipe';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,6 @@ import { DialogWindowModule } from '../features/dialog-window/dialog-window.modu
     SymbolComponent,
     RedirectAuthorizeComponent,
     ProfileComponent,
-    SaveScoreComponent,
     LeaveRoundComponent,
     ConfirmDialogComponent,
     ConfirmAccountComponent,
@@ -49,13 +52,19 @@ import { DialogWindowModule } from '../features/dialog-window/dialog-window.modu
     PasswordValidationComponent,
     PasswordInputComponent,
     EmailInputComponent,
+    SetCellIconPipe,
+    GameResultPipe,
+    TestComponent,
+    SaveScoreComponent,
   ],
   imports: [
     CommonModule,
     RouterLinkWithHref,
     RouterModule,
     MatButtonModule,
-    DialogWindowModule
+    DialogWindowModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   exports: [
     BackBtnComponent,
@@ -77,7 +86,10 @@ import { DialogWindowModule } from '../features/dialog-window/dialog-window.modu
     PasswordComponent,
     PasswordValidationComponent,
     PasswordInputComponent,
-    EmailInputComponent
+    EmailInputComponent,
+    SetCellIconPipe,
+    GameResultPipe,
+    TestComponent
   ]
 })
 export class SharedModule { }

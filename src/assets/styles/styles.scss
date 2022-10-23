@@ -92,6 +92,7 @@ body {
   font-weight: 700;
   text-align: center;
   padding: 24px 8px;
+  z-index: 100;
 
   @media (max-width:709px) {
     width: 340px;
