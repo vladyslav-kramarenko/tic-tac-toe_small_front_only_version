@@ -8,6 +8,8 @@ import { CoreModule } from '../../core/core.module';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { BotGameComponent } from './components/bot-game/bot-game.component';
 import { GameFieldOverlayComponent } from './components/game-field-overlay/game-field-overlay.component';
+import { LeaderBoardComponent } from './components/leader-board/leader-board.component';
+import { LeaderBoardItemComponent } from './components/leader-board-item/leader-board-item.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { GameFieldOverlayComponent } from './components/game-field-overlay/game-
     GameRoomComponent,
     StartPageComponent,
     BotGameComponent,
-    GameFieldOverlayComponent
+    GameFieldOverlayComponent,
+    LeaderBoardComponent,
+    LeaderBoardItemComponent
   ],
   imports: [
     CommonModule,

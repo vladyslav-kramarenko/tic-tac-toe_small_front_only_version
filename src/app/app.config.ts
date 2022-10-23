@@ -9,6 +9,7 @@ export enum RouterLinks {
   resetPass = 'reset_password',
   confirmReset = 'confirm-reset',
   gameRoom = 'game_room',
+  leaderBoard = 'leader_board',
   botConfrontation = 'bot_confrontation'
 }
 

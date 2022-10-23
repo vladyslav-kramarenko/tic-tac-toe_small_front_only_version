@@ -12,6 +12,14 @@
   padding: 8px;
 }
 
+.leaderBoard.score__wrapper {
+  flex-direction: row;
+  align-items: center;
+  width: 343px;
+  height: 66px;
+  padding: 12px 8px 8px 8px;
+}
+
 .trophy:before {
   content: url('../../../../assets/img/trophy.svg');
 }
@@ -36,8 +44,8 @@
 @media (max-width:709px) {
   .score__item {
     flex-direction: column;
-    height: 100%;
     justify-content: space-around;
+    height: 100%;
 
     &:not(:last-child) {
       margin-right: 19px;

@@ -5,6 +5,7 @@ import { RouterLinks } from '../../app.config';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { BotGameComponent } from './components/bot-game/bot-game.component';
 import { CanDeactivateGuard } from '../../core/guards/can-deactivate.guard';
+import { LeaderBoardComponent } from './components/leader-board/leader-board.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
           {
             path: RouterLinks.start,
             component: StartPageComponent
+          },
+          {
+            path: RouterLinks.leaderBoard,
+            component: LeaderBoardComponent
           },
           {
             path: RouterLinks.botConfrontation,
