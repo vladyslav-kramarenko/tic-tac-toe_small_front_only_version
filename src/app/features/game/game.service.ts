@@ -23,6 +23,7 @@ export class GameService {
   isEndGame$: Observable<boolean> = this.isEndGame$$.asObservable();
   gameResult$: Observable<GameResult> = this.gameResult$$.asObservable();
   playerRole: Sign = '';
+  gameReloadTimerId!: ReturnType<typeof setTimeout>;
 
   constructor(
     private loaderService: LoaderService
@@ -101,7 +102,7 @@ export class GameService {
   private chooseCell(): GameCell {
     let cell;
     while (!cell) {
-      const cellId = this.getCellId()
+      const cellId = this.getRandomCellId()
       let changedCell = this.getCellById(cellId);
       if (!changedCell.sign) {
         cell = changedCell;
@@ -118,7 +119,7 @@ export class GameService {
     return structuredClone(this.gameField$$.value)
   }
 
-  private getCellId(): number {
+  private getRandomCellId(): number {
     return Math.floor(Math.random() * 9);
   }
 
@@ -131,6 +132,11 @@ export class GameService {
   private isEndGame(gameResult: GameResult) {
     const isEndGame = Object.values(gameResult).some(item => !!item);
     this.isEndGame$$.next(isEndGame);
+    if (isEndGame) {
+      this.gameReloadTimerId = setTimeout(() => {
+        this.playAgain();
+      }, 3000)
+    }
   }
 
   private gameResult() {
