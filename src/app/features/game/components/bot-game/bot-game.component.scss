@@ -1,4 +1,4 @@
-.game-field__wrapper,
+.game-section__wrapper,
 .info__wrapper {
   display: flex;
 }
@@ -14,7 +14,7 @@
 }
 
 @media (max-width: 709px) {
-  .game-field__wrapper {
+  .game-section__wrapper {
     flex-direction: column;
     align-items: center;
   }
@@ -26,4 +26,14 @@
     margin-right: 0;
     margin-bottom: 24px;
   }
+}
+
+.game-field__wrapper {
+  position: relative;
+}
+
+.overlay__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

@@ -4,6 +4,7 @@ import { GameRoomComponent } from './container/game-room/game-room.component';
 import { RouterLinks } from '../../app.config';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { BotGameComponent } from './components/bot-game/bot-game.component';
+import { CanDeactivateGuard } from '../../core/guards/can-deactivate.guard';
 
 const routes: Routes = [
   {
@@ -24,7 +25,8 @@ const routes: Routes = [
           },
           {
             path: RouterLinks.botConfrontation,
-            component: BotGameComponent
+            component: BotGameComponent,
+            canDeactivate: [ CanDeactivateGuard ]
           }
         ]
       }

@@ -35,6 +35,7 @@ export class ResetPasswordComponent implements OnInit{
         description: 'Please go to your email to reset password'
       }
     }).afterClosed().pipe(
+      tap(v => console.log(v)),
       tap(() => this.router.navigate([ RouterLinks.confirmReset ]))
     ).subscribe()
     // this.authorizationService.resetPassword(this.email).subscribe();
