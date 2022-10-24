@@ -32,7 +32,8 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {
     this.initForm();
     this.passwordSubscription$ = this.password.valueChanges.pipe(
-      tap(value => this.validatePassword(value))
+      tap(value => this.validatePassword(value)),
+      tap((value) => console.log(value))
     );
   }
 

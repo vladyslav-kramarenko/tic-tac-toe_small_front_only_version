@@ -9,6 +9,7 @@ export enum RouterLinks {
   resetPass = 'reset_password',
   confirmReset = 'confirm-reset',
   gameRoom = 'game_room',
+  leaderBoard = 'leader_board',
   botConfrontation = 'bot_confrontation'
 }
 
@@ -25,7 +26,7 @@ export enum Request_Url {
 
 export const minimumPasswordLength = 8;
 
-export const passwordPattern = '/(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[!@#$%^&*a-zA-Z]{8,}/g';
+export const passwordPattern = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,8}$';
 
 export enum ButtonName {
   toGame = 'To Game',
