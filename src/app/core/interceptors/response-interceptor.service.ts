@@ -24,6 +24,7 @@ export class ResponseInterceptor implements HttpInterceptor {
           'Content-Type': 'application/json; charset=UTF-8',
         })
       });
+    this.loaderService.showLoader();
     return next.handle(clonedRequest).pipe(
       catchError((err: any) => {
         this.dialog.open(InfoDialogComponent, {
@@ -36,6 +37,7 @@ export class ResponseInterceptor implements HttpInterceptor {
         })
         return EMPTY;
       }),
+      finalize(() => this.loaderService.hideLoader())
     );
   }
 }

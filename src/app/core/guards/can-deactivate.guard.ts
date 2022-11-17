@@ -10,5 +10,4 @@ export class CanDeactivateGuard implements CanDeactivate<CanComponentDeactivate>
   canDeactivate(component: CanComponentDeactivate): Observable<boolean | UrlTree> | boolean | UrlTree {
     return component.canDeactivate ? component.canDeactivate() : true;
   }
-
 }
