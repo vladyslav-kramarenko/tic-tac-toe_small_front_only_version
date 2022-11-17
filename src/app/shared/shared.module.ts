@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RouterLinkWithHref, RouterModule } from '@angular/router';
 import { BackBtnComponent } from './components/back-btn/back-btn.component';
@@ -13,7 +15,7 @@ import { SymbolComponent } from './components/symbol/symbol.component';
 import { RedirectAuthorizeComponent } from './components/modals/redirect-authorize/redirect-authorize.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { LeaveRoundComponent } from './components/modals/leave-round/leave-round.component';
-import { ConfirmDialogComponent } from './components/modals/confirm-dialog/confirm-dialog.component';
+import { InfoDialogComponent } from './components/modals/info-dialog/info-dialog.component';
 import { ConfirmAccountComponent } from './components/message-page/confirm-account/confirm-account.component';
 import { SentInstructionComponent } from './components/message-page/sent-instruction/sent-instruction.component';
 import { WelcomeComponent } from './components/message-page/welcome/welcome.component';
@@ -26,6 +28,9 @@ import { DialogWindowModule } from '../features/dialog-window/dialog-window.modu
 import { ReactiveFormsModule } from '@angular/forms';
 import { SaveScoreComponent } from './components/modals/save-score/save-score.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { StopPropagationDirective } from './directives/stop-propagation.directive';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +47,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     RedirectAuthorizeComponent,
     ProfileComponent,
     LeaveRoundComponent,
-    ConfirmDialogComponent,
+    InfoDialogComponent,
     ConfirmAccountComponent,
     SentInstructionComponent,
     WelcomeComponent,
@@ -53,6 +58,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     SetCellIconPipe,
     GameResultPipe,
     SaveScoreComponent,
+    StopPropagationDirective,
+    ClickOutsideDirective,
+    ProgressBarComponent,
   ],
   imports: [
     CommonModule,
@@ -61,7 +69,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatButtonModule,
     DialogWindowModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressBarModule
   ],
   exports: [
     BackBtnComponent,
@@ -76,7 +85,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     RedirectAuthorizeComponent,
     ProfileComponent,
     LeaveRoundComponent,
-    ConfirmDialogComponent,
+    InfoDialogComponent,
     ConfirmAccountComponent,
     SentInstructionComponent,
     WelcomeComponent,
@@ -86,6 +95,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     EmailInputComponent,
     SetCellIconPipe,
     GameResultPipe,
+    StopPropagationDirective,
+    ClickOutsideDirective,
+    ProgressBarComponent
   ]
 })
 export class SharedModule { }

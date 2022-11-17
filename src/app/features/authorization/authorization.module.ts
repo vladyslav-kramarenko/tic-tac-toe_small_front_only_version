@@ -9,8 +9,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AuthNavComponent } from './components/auth-nav/auth-nav.component';
 import { SharedModule } from '../../shared/shared.module';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
-import { ConfirmResetComponent } from './components/confrim-reset/confirm-reset.component';
+import { InitResetPasswordComponent } from './components/init-reset-password/init-reset-password.component';
+import { ResetPasswordInstructionComponent } from './components/reset-password-instruction/reset-password-instruction.component';
+import { ConfirmRegistrationComponent } from './components/confirm-registration/confirm-registration.component';
+import { CreateNewPasswordComponent } from './components/create-new-password/create-new-password.component';
 
 
 @NgModule({
@@ -19,8 +21,11 @@ import { ConfirmResetComponent } from './components/confrim-reset/confirm-reset.
     SignUpComponent,
     SignInComponent,
     AuthNavComponent,
-    ResetPasswordComponent,
-    ConfirmResetComponent
+    InitResetPasswordComponent,
+    ResetPasswordInstructionComponent,
+    ConfirmRegistrationComponent,
+    CreateNewPasswordComponent,
+
   ],
   imports: [
     CommonModule,

@@ -26,7 +26,7 @@ export class PasswordInputComponent implements ControlValueAccessor {
   private isPasswordVisible: boolean = false;
 
   iconSrc: string = '../../../../assets/img/eye.svg';
-  password!: string;
+  password: string = '';
   changed!: (value: string) => void;
   touched!: () => void;
 

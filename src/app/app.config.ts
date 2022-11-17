@@ -1,4 +1,5 @@
 import { GameField, GameResult } from './core/models/game.models';
+import { PASSWORD_VALIDATION_RULES } from './core/models/authorization.models';
 
 export enum RouterLinks {
   termsAndConditions = 'terms_and_conditions',
@@ -7,7 +8,9 @@ export enum RouterLinks {
   signIn = 'sign_in',
   authorization = 'authorization',
   resetPass = 'reset_password',
+  createNewPassword = 'create_new_password',
   confirmReset = 'confirm-reset',
+  confirmRegistration = 'confirm_registration',
   gameRoom = 'game_room',
   leaderBoard = 'leader_board',
   botConfrontation = 'bot_confrontation'
@@ -15,18 +18,24 @@ export enum RouterLinks {
 
 export enum PasswordInputTitle {
   createPassword = 'Create a password',
+  enterPassword = 'Enter password',
+  createNewPassword = 'Create a new password',
   password = 'Password'
 }
 
 export enum Request_Url {
   signUp = 'api/SignUp',
   signIn = 'api/SignIn',
-  resetPass = 'api/InitResetPassword'
+  sentEmailForResetPassword = 'api/InitResetPassword',
+  resetPassword = 'api/ResetPassword',
+  refreshToken = 'api/RefreshToken'
 }
 
-export const minimumPasswordLength = 8;
+export const minimumPasswordLength = 6;
 
-export const passwordPattern = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,8}$';
+export const maxPasswordLength = 8;
+
+export const passwordPattern = '^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[a-z]).{6,8}$';
 
 export enum ButtonName {
   toGame = 'To Game',
@@ -77,8 +86,18 @@ export const GameFieldStartState: GameField = [
   }
 ]
 
-export const gameResultInitValue: GameResult = {
+export const GameResultInitValue: GameResult = {
   isP1Win: false,
   isP2Win: false,
   isDraw: false,
 };
+
+export const TOKEN_OBJECT = 'tokenObject'
+
+export const PasswordRulesStartValue: PASSWORD_VALIDATION_RULES = {
+  isLengthNoLongerThanMaxValue: false,
+  isIncludeCapitalLetterSymbol: false,
+  isIncludeNumber: false,
+  isIncludeLowerCaseLetterSymbol: false,
+  isMinLengthEnough: false,
+}

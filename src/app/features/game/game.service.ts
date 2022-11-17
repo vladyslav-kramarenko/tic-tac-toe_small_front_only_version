@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, finalize, Observable, take, tap, timer } from 'rxjs';
 import { GameCell, GameField, GameResult, Sign } from '../../core/models/game.models';
-import { GameFieldStartState, gameResultInitValue, Player } from '../../app.config';
+import { GameFieldStartState, GameResultInitValue, Player } from '../../app.config';
 import { LoaderService } from '../../core/components/loader/loader.service';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class GameService {
   private horizontalLine$$: BehaviorSubject<string> = new BehaviorSubject('');
   private diagonalLine$$: BehaviorSubject<string> = new BehaviorSubject('');
   private isEndGame$$: BehaviorSubject<boolean> = new BehaviorSubject(false);
-  private gameResult$$: BehaviorSubject<GameResult> = new BehaviorSubject(gameResultInitValue);
+  private gameResult$$: BehaviorSubject<GameResult> = new BehaviorSubject(GameResultInitValue);
   private isGameWithBot: boolean = false;
 
   gameField$: Observable<GameField> = this.gameField$$.asObservable();
@@ -60,7 +60,7 @@ export class GameService {
   }
 
   private resetGameResult(): void {
-    this.gameResult$$.next(gameResultInitValue);
+    this.gameResult$$.next(GameResultInitValue);
   }
 
   private removeOverlay(): void {

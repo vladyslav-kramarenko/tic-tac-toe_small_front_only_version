@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { PASSWORD_VALIDATION_RULES } from '../../../core/models/authorization.models';
 
 @Component({
   selector: 'app-password-validation',
@@ -6,9 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./password-validation.component.scss']
 })
 export class PasswordValidationComponent {
-  @Input() isIncludeSpecialSymbol!: boolean;
-  @Input() isIncludeCapitalLetterSymbol!: boolean;
-  @Input() isIncludeLowerCaseLetterSymbol!: boolean;
-  @Input() isMinLengthEnough!: boolean;
-  @Input() isPasswordTouched!: boolean;
+  @Input() isPasswordTouched: boolean = false;
+  @Input() isPasswordRulesValid!: PASSWORD_VALIDATION_RULES;
 }

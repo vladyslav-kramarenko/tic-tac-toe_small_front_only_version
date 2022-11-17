@@ -5,7 +5,6 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GameCellComponent } from './components/game-field/game-cell/game-cell.component';
 import { RouterModule } from '@angular/router';
-import { ClickOutsideDirective } from './directives/click-outside.directive';
 import { SharedModule } from '../shared/shared.module';
 import { LoaderComponent } from './components/loader/loader.component';
 
@@ -17,7 +16,6 @@ import { LoaderComponent } from './components/loader/loader.component';
     NavComponent,
     GameFieldComponent,
     GameCellComponent,
-    ClickOutsideDirective,
     LoaderComponent,
   ],
   imports: [
@@ -29,8 +27,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     FooterComponent,
     NavComponent,
     GameFieldComponent,
-    ClickOutsideDirective,
-    LoaderComponent
+    LoaderComponent,
   ]
 })
 export class CoreModule { }

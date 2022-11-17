@@ -10,8 +10,6 @@ import { GameField } from '../../../../core/models/game.models';
   styleUrls: ['./start-page.component.scss']
 })
 export class StartPageComponent {
-  readonly fixedButtonVisibleHeight: number = 300;
-  readonly fixedButtonVisibleWidth: number = 800;
   readonly routerLinks: typeof RouterLinks = RouterLinks;
 
   gameField$!: Observable<GameField>;

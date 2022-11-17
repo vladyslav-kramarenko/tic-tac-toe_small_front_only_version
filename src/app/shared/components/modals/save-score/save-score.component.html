@@ -1,4 +1,4 @@
-<app-dialog-window (onBackdropClick)="dialogRef.close()">
+<app-dialog-window (onBackdropClick)="dialogRef.close()" >
   <div saveComp class="save_score col modal-alert">
     <div>
       <h2 class="title">Save your score</h2>
@@ -6,17 +6,17 @@
     </div>
     <div class="modal_buttons row space-around w-100">
       <div class="row center">
-        <a class="leave-btn link secondary-link" [mat-dialog-close]="true">
+        <a class="leave-btn link secondary-link" [mat-dialog-close]="true" appStopPropagation>
           Leave anyway
         </a>
       </div>
       <div class="row center">
-        <a class="link primary-link" [mat-dialog-close]="true" (click)="onSignUp()">
+        <a class="link primary-link" [mat-dialog-close]="true" (click)="onSignUp()" appStopPropagation>
           Sign Up
         </a>
       </div>
       <div class="row center">
-        <a class="link primary-link" [mat-dialog-close]="true" (click)="onSignIn()">
+        <a class="link primary-link" [mat-dialog-close]="true" (click)="onSignIn()" appStopPropagation>
           Sign In
         </a>
       </div>

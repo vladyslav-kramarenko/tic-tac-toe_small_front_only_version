@@ -133,10 +133,16 @@ body .mat-dialog-container {
 }
 
 .red,
-.red.password-input.form__item {
+.red.password-input.form__item,
+.name-label.red.form__item,
+.email-input.red.form__item,
+.accept-checkbox.red,
+.code-label.red.form__item {
   color: $validation-red;
 }
 
-.password.red-border.form__input {
+.password.red-border.form__input,
+.name.red-border.form__input,
+.email.red-border.form__input {
   border-color: $validation-red;
 }

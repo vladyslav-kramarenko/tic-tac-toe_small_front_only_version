@@ -1,10 +1,9 @@
-
 <div *ngIf="!isResetPasswordPage">
-  <form [formGroup]="signInForm" autocomplete="off" (submit)="onSignIn()">
-    <ng-container *ngIf="signInSubscription$ | async"></ng-container>
+  <form >
 
-    <app-email-input [formControl]="email"></app-email-input>
-    <app-password-input [formControl]="password" [title]="passwordTitle"></app-password-input>
+    <app-email-input ></app-email-input>
+    <app-password-input
+    ></app-password-input>
 
     <p class="forgot__link--wrapper">
       <a class="forgot__link" [routerLink]="['/', routerLinks.authorization, routerLinks.signIn, routerLinks.resetPass]">

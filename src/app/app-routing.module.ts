@@ -2,7 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { RouterLinks } from './app.config';
-import { ConfirmResetComponent } from './features/authorization/components/confrim-reset/confirm-reset.component';
+import { ResetPasswordInstructionComponent } from './features/authorization/components/reset-password-instruction/reset-password-instruction.component';
+import {
+  ConfirmRegistrationComponent
+} from './features/authorization/components/confirm-registration/confirm-registration.component';
+import {
+  CreateNewPasswordComponent
+} from './features/authorization/components/create-new-password/create-new-password.component';
 
 const routes: Routes = [
   {
@@ -17,7 +23,15 @@ const routes: Routes = [
   },
   {
     path: RouterLinks.confirmReset,
-    component: ConfirmResetComponent
+    component: ResetPasswordInstructionComponent
+  },
+  {
+    path: RouterLinks.createNewPassword,
+    component: CreateNewPasswordComponent
+  },
+  {
+    path: RouterLinks.confirmRegistration,
+    component: ConfirmRegistrationComponent
   },
   {
     path: RouterLinks.termsAndConditions,

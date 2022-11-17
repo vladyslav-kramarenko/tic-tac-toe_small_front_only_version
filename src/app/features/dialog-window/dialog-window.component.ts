@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-window',
@@ -8,7 +9,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class DialogWindowComponent {
   @Output() onBackdropClick: EventEmitter<void> = new EventEmitter<void>();
 
-  backDropEmitter(): void {
-    this.onBackdropClick.emit();
+  constructor(
+    public dialogRef: MatDialogRef<DialogWindowComponent>,
+  ) {
   }
 }

@@ -9,7 +9,7 @@ import { DialogWindowService } from '../../../../features/dialog-window/dialog-w
   templateUrl: './save-score.component.html',
   styleUrls: ['./save-score.component.scss']
 })
-export class SaveScoreComponent implements OnInit {
+export class SaveScoreComponent {
   readonly routerLinks: typeof RouterLinks = RouterLinks;
   readonly routerConfig = {
     signIn: ['/', RouterLinks.authorization, RouterLinks.signIn],
@@ -22,9 +22,6 @@ export class SaveScoreComponent implements OnInit {
     private router: Router,
     private dialogService: DialogWindowService
   ) { }
-
-  ngOnInit(): void {
-  }
 
   onSignUp(): void {
     this.dialogService.isRedirectToSignUp = true;

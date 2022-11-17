@@ -4,7 +4,7 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { RouterLinks } from '../../app.config';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AuthorizationComponent } from './container/authorization.component';
-import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { InitResetPasswordComponent } from './components/init-reset-password/init-reset-password.component';
 import { InfoPageComponent } from './components/info-page/info-page.component';
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
           },
           {
             path: RouterLinks.signUp,
-            component: SignUpComponent
+            component: SignUpComponent,
           },
           {
             path: RouterLinks.signIn,
@@ -30,7 +30,7 @@ const routes: Routes = [
             children: [
               {
                 path: RouterLinks.resetPass,
-                component: ResetPasswordComponent
+                component: InitResetPasswordComponent
               }
             ]
           },

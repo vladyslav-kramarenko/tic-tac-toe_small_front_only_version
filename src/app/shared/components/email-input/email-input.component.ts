@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, forwardRef, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, forwardRef, Input, Output, ViewChild } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -18,7 +18,9 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 export class EmailInputComponent {
   @ViewChild('emailInput') emailInput!: ElementRef;
 
-  email!: string;
+  @Input() isEmailInvalid!:boolean;
+
+  email: string = '';
   changed!: (value: string) => void;
   touched!: () => void;
 
