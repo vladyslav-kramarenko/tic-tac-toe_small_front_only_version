@@ -24,6 +24,7 @@ export class SignUpComponent implements OnInit {
   isPasswordRulesValid: PASSWORD_VALIDATION_RULES = PasswordRulesStartValue;
 
   passwordSubscription$!: Observable<string>;
+  readonly routerLink: typeof RouterLinks = RouterLinks;
 
   constructor(
     private fb: FormBuilder,
@@ -120,3 +121,53 @@ export class SignUpComponent implements OnInit {
   }
 
 }
+// import {Component, OnInit} from "@angular/core";
+// import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+// import {passwordPattern} from "../../../../app.config";
+//
+// @Component({
+//   selector: "app-sign-up",
+//   templateUrl: "./sign-up.component.html",
+//   styleUrls: [
+//     './sign-up.component.scss',
+//     '../../container/authorization.component.scss'
+//   ]
+// })
+// export class SignUpComponent implements OnInit {
+//   signUpForm!: FormGroup;
+//
+//   constructor(
+//     private fb: FormBuilder
+//   ) {
+//   }
+//
+//   get nickName(): FormControl {
+//     return this.signUpForm.get("nickName") as FormControl;
+//   }
+//
+//   get email(): FormControl {
+//     return this.signUpForm.get("email") as FormControl;
+//   }
+//
+//   get password(): FormControl {
+//     return this.signUpForm.get("password") as FormControl;
+//   }
+//
+//   get checkbox(): FormControl {
+//     return this.signUpForm.get("checkbox") as FormControl;
+//   }
+//
+//   ngOnInit() {
+//     this.initForm();
+//     this.signUpForm.valueChanges.subscribe(value => console.log(value))
+//   }
+//
+//   private initForm(): void {
+//     this.signUpForm = this.fb.group({
+//       nickName: ['', [Validators.required]],
+//       email: ['', [Validators.required]],
+//       password: ['', [Validators.required, Validators.pattern(passwordPattern)]],
+//       checkbox: [false, [Validators.requiredTrue]]
+//     })
+//   }
+// }
