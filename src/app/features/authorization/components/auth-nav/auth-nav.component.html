@@ -1,4 +1,13 @@
 <div class="nav__list">
-    <a routerLinkActive="active" [routerLink]="[routerLinks.signIn]" class="nav__item">Sign In</a>
-    <a routerLinkActive="active" [routerLink]="[routerLinks.signUp]" class="nav__item">Sign Up</a>
+<!--Not working tabs, only visual tabs-->
+<!--  <a class="nav__item">Sign In</a>-->
+<!--  <a class="nav__item">Sign Up</a>-->
+
+<!--Working tabs, not changing tab visual-->
+<!--  <a [routerLink]="[routerLinks.signIn]" class="nav__item">Sign In</a>-->
+<!--  <a [routerLink]="[routerLinks.signUp]" class="nav__item">Sign Up</a>-->
+
+<!--Working tabs with active status-->
+  <a routerLinkActive="active" [routerLink]="[routerLinks.signIn]" class="nav__item">Sign In</a>
+  <a routerLinkActive="active" [routerLink]="[routerLinks.signUp]" class="nav__item">Sign Up</a>
 </div>
