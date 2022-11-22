@@ -35,6 +35,12 @@
 
   <div class="additional-question__wrapper">
     <span class="additional-question">Already have an account?</span>
-    <a class="additional-question__link">Sign In</a>
+
+    <a class="additional-question__link" [routerLink]="['/', routerLink.authorization, routerLink.signIn]">
+      <span>Sign In</span>
+      <img src="../../../../../assets/img/arrow-right.svg" alt="arrow_right_icon">
+    </a>
+
+
   </div>
 </div>
