@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
+  PasswordInputTitle,
   RouterLinks
 } from '../../../../app.config';
 import { Router } from '@angular/router';
@@ -14,6 +15,7 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   readonly routerLinks: typeof RouterLinks = RouterLinks;
+  readonly passwordTitle: string = PasswordInputTitle.enterPassword;
   constructor(
     private router: Router
   ) { }

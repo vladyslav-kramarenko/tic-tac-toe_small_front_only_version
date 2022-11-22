@@ -2,7 +2,9 @@
   <form >
 
     <app-email-input ></app-email-input>
-    <app-password-input></app-password-input>
+    <app-password-input
+      [title]="passwordTitle"
+    ></app-password-input>
 
     <p class="forgot__link--wrapper">
       <a class="forgot__link" [routerLink]="['/', routerLinks.authorization, routerLinks.signIn, routerLinks.resetPass]">

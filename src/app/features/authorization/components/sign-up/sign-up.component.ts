@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { passwordPattern, PasswordRulesStartValue, RouterLinks } from '../../../../app.config';
+import {PasswordInputTitle, passwordPattern, PasswordRulesStartValue, RouterLinks} from '../../../../app.config';
 import { PASSWORD_VALIDATION_RULES } from '../../../../core/models/authorization.models';
 import { Observable, take, takeUntil, tap } from 'rxjs';
 import { validatePassword } from '../../../../shared/utils';
@@ -20,7 +20,7 @@ import { Router } from '@angular/router';
 export class SignUpComponent implements OnInit {
 
   signUpForm!: FormGroup;
-  passwordTitle: string = 'Create a password';
+  readonly passwordTitle: string = PasswordInputTitle.createPassword;
   isPasswordRulesValid: PASSWORD_VALIDATION_RULES = PasswordRulesStartValue;
 
   passwordSubscription$!: Observable<string>;
