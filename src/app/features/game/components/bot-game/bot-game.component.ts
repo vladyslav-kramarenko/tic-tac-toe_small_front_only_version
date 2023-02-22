@@ -4,8 +4,7 @@ import { GameService } from '../../game.service';
 import { Observable } from 'rxjs';
 import { GameCell, GameField, GameResult, Sign } from '../../../../core/models/game.models';
 import { CanComponentDeactivate } from '../../../../core/models/can-component-deactivate.interface';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { SaveScoreComponent } from '../../../../shared/components/modals/save-score/save-score.component';
+import { MatDialog} from '@angular/material/dialog';
 import { DialogWindowService } from '../../../dialog-window/dialog-window.service';
 
 @Component({
@@ -50,15 +49,16 @@ export class BotGameComponent implements OnInit, CanComponentDeactivate, OnDestr
   }
 
   canDeactivate(): Observable<boolean> | boolean {
-    let dialogRef!: MatDialogRef<any>;
-    const isRedirected = this.dialogService.isRedirectToSignUp || this.dialogService.isRedirectToSignIn;
-    if (!isRedirected) {
-      dialogRef = this.dialog.open(SaveScoreComponent, {
-        hasBackdrop: false
-      });
-    }
+    // let dialogRef!: MatDialogRef<any>;
+    // const isRedirected = this.dialogService.isRedirectToSignUp || this.dialogService.isRedirectToSignIn;
+    // if (!isRedirected) {
+    //   dialogRef = this.dialog.open(SaveScoreComponent, {
+    //     hasBackdrop: false
+    //   });
+    // }
     clearTimeout(this.gameService.gameReloadTimerId);
-    return isRedirected ? isRedirected : dialogRef.afterClosed();
+    // return isRedirected ? isRedirected : dialogRef.afterClosed();
+    return true;
   }
 
   onPreferredSymbol(symbol: string): void {

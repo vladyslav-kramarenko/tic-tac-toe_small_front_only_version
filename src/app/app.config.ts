@@ -1,5 +1,5 @@
 import { GameField, GameResult } from './core/models/game.models';
-import { PASSWORD_VALIDATION_RULES } from './core/models/authorization.models';
+// import { PASSWORD_VALIDATION_RULES } from './core/models/authorization.models';
 
 export enum RouterLinks {
   termsAndConditions = 'terms_and_conditions',
@@ -94,10 +94,10 @@ export const GameResultInitValue: GameResult = {
 
 export const TOKEN_OBJECT = 'tokenObject'
 
-export const PasswordRulesStartValue: PASSWORD_VALIDATION_RULES = {
-  isLengthNoLongerThanMaxValue: false,
-  isIncludeCapitalLetterSymbol: false,
-  isIncludeNumber: false,
-  isIncludeLowerCaseLetterSymbol: false,
-  isMinLengthEnough: false,
-}
+// export const PasswordRulesStartValue: PASSWORD_VALIDATION_RULES = {
+//   isLengthNoLongerThanMaxValue: false,
+//   isIncludeCapitalLetterSymbol: false,
+//   isIncludeNumber: false,
+//   isIncludeLowerCaseLetterSymbol: false,
+//   isMinLengthEnough: false,
+// }

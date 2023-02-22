@@ -50,15 +50,15 @@
   padding: 8px 73px;
 }
 
-.report__link {
-  padding: 8px;
-}
+//.report__link {
+//  padding: 8px;
+//}
 
 @media (max-width:709px) {
-  .feedback__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+  //.feedback__wrapper {
+  //  display: flex;
+  //  flex-direction: column;
+  //}
 
   .like-question__wrapper {
     margin-right: 0;
@@ -70,7 +70,7 @@
     padding: 8px 151px;
   }
 
-  .bug-report__wrapper {
-    padding-top: 24px;
-  }
+  //.bug-report__wrapper {
+  //  padding-top: 24px;
+  //}
 }

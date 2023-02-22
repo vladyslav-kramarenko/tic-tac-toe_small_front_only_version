@@ -8,6 +8,6 @@ import { CanComponentDeactivate } from '../models/can-component-deactivate.inter
 })
 export class CanDeactivateGuard implements CanDeactivate<CanComponentDeactivate> {
   canDeactivate(component: CanComponentDeactivate): Observable<boolean | UrlTree> | boolean | UrlTree {
-    return component.canDeactivate ? component.canDeactivate() : true;
+    return true;
   }
 }
